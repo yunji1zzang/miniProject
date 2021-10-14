@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<<<<<<< HEAD
+=======
+<!-- 공통부분 제거 필요 -->
+<!-- css, js 분리 -->
+
+>>>>>>> cb2504f2e8e6a16007f1aca55ae4e6bf9994c7c0
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>후기 게시판</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
+=======
+    <!-- 제이쿼리 ui -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+>>>>>>> cb2504f2e8e6a16007f1aca55ae4e6bf9994c7c0
+</head>
+</head>
+<body>
+<br>
+<h1 class="list">후기 상세</h1>
+<br>
+<<<<<<< HEAD
+=======
+<%--
+<!-- 글 수정 처리는 reviewUpdate_proc.jsp 파일에서 진행한다. -->
+<form action="reviewUpdate_proc.jsp" method="post">
+
+	<!-- 글 수정 시 글 상세 화면(getBoard.jsp)이 글 수정에 사용 된다.
+	     이때, 글 수정 처리를 진행 하려면, 수정할 글의 제목과 내용 뿐만 아니라,
+	     게시글 번호로 알야아 한다. 따라서, 상세 화면을 출력할 때 form 태그 밑에
+	   HIDDEN 타입의 input 태그를 추가하여 수정할 게시글 번호도 같이
+	     전달될 수 있도록 코딩해야 한다. -->
+>>>>>>> cb2504f2e8e6a16007f1aca55ae4e6bf9994c7c0
+	<input name="seq" type="hidden" value="<%=board.getSeq()%>" />
+	<table border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="70">제목</td>
+			<td align="left"><input name="title" type="text"
+				value="<%=board.getTitle()%>" /></td>
+		</tr>
+		<tr>
+			<td>작성자</td>
+			<td align="left"><%=board.getWriter()%></td>			
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td align="left"><textarea rows="10" cols="40"
+				 name="content"><%=board.getContent()%>
+				 </textarea></td>
+		</tr>
+		<tr>
+			<td>등록일</td>
+			<td align="left"><%=board.getRegDate()%></td>			
+		</tr>
+		<tr>
+			<td>조회수</td>
+			<td align="left"><%=board.getCnt()%></td>			
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit"
+				value="글 수정" /></td>
+		</tr>
+	</table>
+<<<<<<< HEAD
+=======
+</form>
+--%>
+>>>>>>> cb2504f2e8e6a16007f1aca55ae4e6bf9994c7c0
+<br>
+<br>
+<div class="list">
+<a href="reviewInsert.html>후기 등록</a>&nbsp;&nbsp;&nbsp;
+<<<<<<< HEAD
+=======
+<!-- 사용자가 상세 화면에서 글 삭제 링크를 클릭하면 deleteBoard_proc.jsp 파일에서
+         해당 게시글을 삭제 처리하면 된다. 이때 삭제할 게시글 번호를
+     deleteBoard_proc.jsp 파일에 알려줘야 하므로
+     deleteBoard_proc.jsp 뒤에 seq 파라미터 정보를 추가한다.-->
+<%-- <a href="reviewDelete_proc.jsp?seq=<%=board.getSeq()%>">후기 삭제</a>&nbsp;&nbsp;&nbsp; --%>
+>>>>>>> cb2504f2e8e6a16007f1aca55ae4e6bf9994c7c0
+<a href="reviewList.html">후기 목록</a>
+</div>
+<br><br>
+</body>
+</html>

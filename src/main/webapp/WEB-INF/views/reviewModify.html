@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+
+ 
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+
+<title>못난이들</title>
+<link rel="stylesheet" href="http://dmshop.kr/theme/moon/css/default_shop.css?ver=12928">
+<link rel="stylesheet" href="http://dmshop.kr/theme/moon/skin/shop/basic/style.css?ver=12928">
+<!--[if lte IE 8]>
+<script src="http://dmshop.kr/js/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://dmshop.kr";
+var g5_bbs_url   = "http://dmshop.kr/bbs";
+var g5_is_member = "1";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+var g5_shop_url = "http://dmshop.kr/shop";
+var g5_theme_shop_url = "http://dmshop.kr/theme/moon/shop";
+</script>
+<!--<script src="http://dmshop.kr/js/jquery-1.8.3.min.js"></script>-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://dmshop.kr/js/bootstrap.js"></script>
+<script src="http://dmshop.kr/js/jquery.shop.menu.js?ver=11321"></script>
+<script src="http://dmshop.kr/js/common.js?ver=11321"></script>
+<script src="http://dmshop.kr/js/icecream.js?ver=11321"></script>
+	<script src="http://dmshop.kr/theme/moon/js/jquery.flexslider-min.js"></script>
+<link href="http://dmshop.kr/theme/moon/js/flexslider.css" rel="stylesheet">
+	
+	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+<div id="hd_login_msg">고영희님 로그인 중 <a href="http://dmshop.kr/bbs/logout.php">로그아웃</a></div>
+<!-- 상품문의 쓰기 시작 { -->
+<div id="sit_qa_write" class="new_win">
+    <h1 id="win_title">사용후기 수정</h1>
+
+    <form name="fitemqa" method="post" action="./itemqaformupdate.php" onsubmit="return fitemqa_submit(this);" autocomplete="off">
+    <input type="hidden" name="w" value="">
+    <input type="hidden" name="it_id" value="2109131003">
+    <input type="hidden" name="iq_id" value="">
+
+    <div class="tbl_frm01 tbl_wrap">
+        <table>
+        <colgroup>
+            <col class="grid_2">
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <th scope="row">옵션</th>
+            <td>
+                <input type="checkbox" name="iq_secret" id="iq_secret" value="1" >
+                <label for="iq_secret">비밀글</label>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="iq_email">이메일</label></th>
+            <td><input type="text" name="iq_email" id="iq_email"  value="" class="frm_input" size="30"> 이메일을 입력하시면 답변 등록 시 답변이 이메일로 전송됩니다.</td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="iq_hp">휴대폰</label></th>
+            <td><input type="text" name="iq_hp" id="iq_hp"  value="" class="frm_input" size="20"> 휴대폰번호를 입력하시면 답변 등록 시 답변등록 알림이 SMS로 전송됩니다.</td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="iq_subject">제목<strong class="sound_only"> 필수</strong></label></th>
+            <td><input type="text" name="iq_subject" value="" id="iq_subject" required class="required frm_input" minlength="2" maxlength="250"></td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="iq_question">질문</label></th>
+            <td><span class="sound_only">웹에디터 시작</span>
+<script src="http://dmshop.kr/plugin/editor/smarteditor2/js/service/HuskyEZCreator.js"></script>
+<script>var g5_editor_url = "http://dmshop.kr/plugin/editor/smarteditor2", oEditors = [], ed_nonce = "MJZ07nykKX|1634221830|2f929be02fefdc397066a227e19327be4826f50d";</script>
+<script src="http://dmshop.kr/plugin/editor/smarteditor2/config.js"></script>
+<textarea id="iq_question" name="iq_question" class="smarteditor2" maxlength="65536" style="width:100%;height:300px"></textarea>
+<span class="sound_only">웹 에디터 끝</span></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="win_btn">
+        <input type="submit" value="수정 완료" class="btn_submit">
+		<input type="submit" value="글 삭제" class="btn_submit">
+        <button type="button" onclick="self.close();">닫기</button>
+    </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+function fitemqa_submit(f)
+{
+    var iq_question_editor_data = oEditors.getById['iq_question'].getIR();
+oEditors.getById['iq_question'].exec('UPDATE_CONTENTS_FIELD', []);
+if(jQuery.inArray(document.getElementById('iq_question').value.toLowerCase().replace(/^\s*|\s*$/g, ''), ['&nbsp;','<p>&nbsp;</p>','<p><br></p>','<div><br></div>','<p></p>','<br>','']) != -1){document.getElementById('iq_question').value='';}
+if (!iq_question_editor_data || jQuery.inArray(iq_question_editor_data.toLowerCase(), ['&nbsp;','<p>&nbsp;</p>','<p><br></p>','<p></p>','<br>']) != -1) { alert("내용을 입력해 주십시오."); oEditors.getById['iq_question'].exec('FOCUS'); return false; }
+
+    return true;
+}
+</script>
+</body>
+</html>
